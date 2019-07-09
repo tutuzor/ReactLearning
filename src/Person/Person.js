@@ -1,5 +1,5 @@
 import React from 'react';
-import './Person.css';
+import styles from './Person.module.css';
 
 const person = (props) => {
     const updatePersonAge = (event) => {
@@ -19,7 +19,7 @@ const person = (props) => {
     }
 
     return(
-        <div className="Person">
+        <div className={styles.Person}>
             <p>Person [{props.index}] with name [{props.name}] of [{props.age}] years old</p>
             <input type="text" value={props.name} onChange={updatePersonName}></input>
             <input type="number" value={props.age} onChange={updatePersonAge}></input>
